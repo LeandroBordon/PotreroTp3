@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Replicas MSSQL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Replicas MSSQL</h1></header>
+    <div class="main">
+        <section>
+            <br>
+        <p>La replicación de SQL Server es una tecnología que nos permite copiar, distribuir datos y objetos de bases de datos de una base de datos a otra y luego poder sincronizar entre bases de datos mantener la consistencia e integridad de los datos. Así aumentar la disponibilidad de los datos y mejorar el rendimiento de consultas globales.</p>
+        <br>
+        <h2>Componentes claves</h2>
+        <p>La replicación requiere ciertos componentes para funcionar los principales son: Artículo, Publicador, Distribuidor y Suscriptor.</p>
+        <br>
+        <h3>Articulo</h3>
+        <p>Para cada objeto que debe ser replicado es necesario definir un artículo, cada artículo corresponde a un único objeto de la base de datos. Un artículo se puede definir como una Tabla, una función o procedimiento almacenado. Las propiedades de un artículo definen si contiene todo el objeto.
+            Las Publicaciones son una colección de artículos agrupados como unidad. Se puede definir que un artículo apunte a una publicación específica, dado que cada artículo puede ser una publicación de sí misma.
+            </p>
+            <br>
+            <h3>Publicador</h3>
+            <p>El publicador es el servidor de base de datos que pone los datos a disposición de otros servidores para la replicación. Una vez definida la publicación, el Distribuidor y el Suscriptor se encargan de todo el trabajo pesado.</p>
+            <br>
+            <h3>Distribuidor</h3>
+            <p>Cada Publicador está vinculado a un único distribuidor. El Distribuidor aloja la base de datos de distribución y almacena los datos históricos, transacciones y metadatos.
+                Dependiendo de la configuración, el Distribuidor también puede ser responsable de notificar a los suscriptores de una publicación en particular, que un artículo ha cambiado.
+                </p>
+                <br>
+                <h3>Suscriptor</h3>
+                <p>Cada suscripción es una petición de copia de datos o de objetos de la base de datos para replicar.
+                    Existen dos tipos de suscripciones: 
+                    Las suscripciones de inserción (push): el distribuidor actualiza directamente los datos en la base de datos del suscriptor.
+                    Las suscripciones de extracción (pull): el suscriptor pregunta regularmente al distribuidor si hay nuevos cambios disponibles, y entonces actualiza los datos en la propia base de datos de la suscripción.
+                    </p>
+    </section>
+    <aside>
+        <img src="elementosreplicas.png" alt="">
+    </aside></div>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="">Link1</a></li>
+                <li><a href="">Link2</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
